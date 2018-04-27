@@ -3210,7 +3210,7 @@ Slides - Backgrounds <section class="bg-primary">
 
 /*Transparent/Opacity*/
 .bg-trans-dark {
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.6); }
 
 .bg-trans-light {
   background: rgba(0, 0, 0, 0.2); }
