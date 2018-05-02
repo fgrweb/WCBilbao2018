@@ -21,4 +21,4 @@ $ cache flush
 #Borrar transcients
 $ wp transient delete --all
 #regenerar archivos de medios
-$ wp media regenerate
+$ wp media regenerate --yes
