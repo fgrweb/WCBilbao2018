@@ -14,3 +14,11 @@ tar -xvf backup.tar
 wp db import BD-local.sql
 #Reemplazar URL
 wp search-replace 'http://wpcli.local' 'http://wcbilbao.local'
+#enlaces permanentes
+$ wp rewrite flush
+#Cache 
+$ cache flush
+#Borrar transcients
+$ wp transient delete --all
+#regenerar archivos de medios
+$ wp media regenerate
