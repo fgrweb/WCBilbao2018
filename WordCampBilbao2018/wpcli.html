@@ -673,6 +673,7 @@
               #Reemplazar URL
               $ wp search-replace 'http://wpcli.local' 'http://wcbilbao.local'
               #enlaces permanentes
+              $ wp rewrite structure '/%postname%/'
               $ wp rewrite flush
               #Cache 
               $ wp cache flush
