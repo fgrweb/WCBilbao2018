@@ -726,9 +726,9 @@
             <h2><strong>exportar.sh</strong></h2>
             <pre>
               #Backup del wp-content
-              $ tar -czvf backup.tar wp-content
+              tar -czvf backup.tar wp-content
               #Backup de la BD
-              $ wp db export BD-local.sql
+              wp db export BD-local.sql
             </pre>
             <p><a href="https://github.com/fgrweb/talks/blob/master/WordCampBilbao2018/sh/exportar.sh" target="_blank">https://github.com/fgrweb/talks/blob/master/WordCampBilbao2018/sh/exportar.sh</a></p>
           </div>
@@ -754,22 +754,23 @@
             <h2><strong>importar.sh</strong></h2>
             <pre>
               #Descargar e instalar WordPress
-              $ wp core download --locale=es_ES
+              wp core download --locale=es_ES
               #Crear el wp-config.php
-              $ wp config create --dbname=ejemplo --dbuser=root --dbpass=root --dbprefix=wcb_
+              wp config create --dbname=ejemplo --dbuser=root --dbpass=root --dbprefix=wcb_
               #Crear Base de Datos
-              $ wp db create
+              wp db create
               #Instalar WordPress
-              $ wp core install --url=http://wcbilbao.local --admin_user=fgr --admin_password=fgr --admin_email=info@fgrweb.es --title="WordCamp Bilbao 2018"
+              wp core install --url=http://wcbilbao.local --admin_user=fgr --admin_password=fgr --admin_email=info@fgrweb.es --title="WordCamp Bilbao 2018"
               #Renombrar wp-content
-              $ mv wp-content _wp-content
+              mv wp-content _wp-content
               #Descomprimir wp-content original
-              $ tar -xvf backup.tar
+              tar -xvf backup.tar
               #Importar Base de Datos
-              $ wp db import BD-local.sql
+              wp db import BD-local.sql
               #Reemplazar URL
-              $ wp search-replace 'http://wpcli.local' 'http://wcbilbao.local'
+              wp search-replace 'http://wpcli.local' 'http://wcbilbao.local'
               #enlaces permanentes
+              wp rewrite structure '/%postname%/'
               wp rewrite flush
               #Cache 
               wp cache flush
