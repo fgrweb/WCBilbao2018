@@ -1,2 +1,2 @@
-# talks
-List of slides and talks I've given on Meetups and WordCamps
+# WC Bilbao 2018
+Talk in WordCamp Bilbao 2018 about WP-CLI
